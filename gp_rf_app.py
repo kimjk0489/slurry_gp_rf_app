@@ -103,7 +103,7 @@ if st.button("🔍 조성 추천 및 모델 예측 비교 보기"):
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.plot(x_vals_g, gp_mean, color="blue", label="GP Predicted Mean")
     ax.fill_between(x_vals_g, gp_mean - 1.96 * gp_std, gp_mean + 1.96 * gp_std,
-                    color="blue", alpha=0.2, label="GP 95% CI")
+                    color="blue", alpha=0.2, label="GP 95% Confidence Interval")
     ax.plot(x_vals_g, rf_mean, color="green", linestyle="--", label="RF Predicted Mean")
     ax.scatter(train_cb, train_y_np, color="red", label="Observed Data", zorder=10)
     ax.set_title("GP vs RF Prediction")
